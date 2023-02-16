@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="search-input">Search:</label>
+        <input type="text" id="search-input">
+        <button type="button" id="search-button">Search</button>
+      </div>
+      
+      <ul id="search-results"></ul>
+      <script>
+        // Đọc tập tin JSON
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        // Lưu trữ dữ liệu trong biến
+        const items = data.data;
+
+        // Lấy các phần tử HTML cần thiết
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+
+        // Hàm tìm kiếm
+        function search() {
+            // Xóa kết quả tìm kiếm cũ
+            searchResults.innerHTML = '';
+
+            // Lấy từ khóa tìm kiếm
+            const query = searchInput.value.toLowerCase();
+
+            // Lặp qua tất cả các mục dữ liệu
+            items.forEach(item => {
+                // Nếu tiêu đề hoặc mô tả chứa từ khóa tìm kiếm
+                if (item.title.toLowerCase().includes(query) || item.description.toLowerCase().includes(query)) {
+                    // Tạo phần tử li để hiển thị kết quả
+                    const li = document.createElement('li');
+
+                    // Tạo phần tử a để hiển thị link
+                    const link = document.createElement('a');
+                    link.href = item.link;
+                    link.textContent = item.title;
+                    li.appendChild(link);
+
+                    // Tạo phần tử img để hiển thị ảnh
+                    const img = document.createElement('img');
+                    img.src = item.image;
+                    li.appendChild(img);
+
+                    searchResults.appendChild(li);
+                }
+            });
+        }
+
+        // Gọi hàm tìm kiếm khi người dùng click vào nút tìm kiếm
+        searchButton.addEventListener('click', search);
+    });
+      </script>
+</body>
+</html>
