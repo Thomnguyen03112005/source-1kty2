@@ -43,7 +43,6 @@ $(document).ready(function(){
           $(".card-title25").html(data[25].title);
 
           //hinhanh
-          //$(".card-img-top").html(data[0].img);
           //$(".card-img-top1").html(data[1].img);
           $(".card-text").htm(data[0].content);
           $(".card-text").htm(data[0].content);
@@ -57,15 +56,53 @@ $(document).ready(function(){
           $(".card-text").htm(data[0].content);
           $(".card-text").htm(data[0].content);
           $(".card-text").htm(data[0].content);
-          //content1
+          //hinhanh
+          $("#img").src =(data[0].img);
+          $('#img1').src = (data[1].img)
+                    //content1
           $(".noidung").html(data[0].noidung)
           $(".noidung1").html(data[1].noidung)
           $(".noidung2").html(data[2].noidung)
           $(".noidung3").html(data[3].noidung)
           $(".noidung3").html(data[4].noidung)
           $(".noidung4").html(data[5].noidung)
+         
+
+
         }
       }
+      
+    });
+    $(document).ready(function() {
+      $.getJSON('data.json', function(data) {
+        $('#img').attr('src', data[0].img);
+        $('#img1').attr('src', data[1].img);
+        $('#img2').attr('src', data[2].img);
+        $('#img3').attr('src', data[3].img);
+        $('#img4').attr('src', data[4].img);
+        $('#img5').attr('src', data[5].img);
+        $('#img6').attr('src', data[6].img);
+        $('#img7').attr('src', data[7].img);
+        $('#img8').attr('src', data[8].img);
+        $('#img9').attr('src', data[9].img);
+        $('#img10').attr('src', data[10].img);
+        $('#img11').attr('src', data[11].img);
+        $('#img12').attr('src', data[12].img);
+        $('#img13').attr('src', data[13].img);
+        $('#img14').attr('src', data[14].img);
+        $('#img15').attr('src', data[15].img);
+        $('#img16').attr('src', data[16].img);
+        $('#img17').attr('src', data[17].img);
+        $('#img18').attr('src', data[18].img);
+        $('#img19').attr('src', data[19].img);
+        $('#img20').attr('src', data[20].img);
+        $('#img21').attr('src', data[21].img);
+        $('#img22').attr('src', data[22].img);
+        $('#img23').attr('src', data[23].img);
+        $('#img24').attr('src', data[24].img);
+        $('#img25').attr('src', data[25].img);
+        $('#img26').attr('src', data[26].img);
+      });
     });
     
       $('.owl-carousel').owlCarousel({

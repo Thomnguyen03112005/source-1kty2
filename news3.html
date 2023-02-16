@@ -39,6 +39,20 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <title>Document</title>
   <script src="index.js"></script>
+  <script>// HTM
+    
+    // JavaScript
+// Đọc file JSON
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    // Lấy đường dẫn ảnh từ data.json
+    const imageUrl = data[5].img;
+    // Đặt đường dẫn ảnh vào thuộc tính src của thẻ img trong HTML
+    document.querySelector('img5').src = imageUrl;
+  });
+
+    </script>
 </head>
 
 <body>
@@ -106,9 +120,7 @@
             src="https://images2.thanhnien.vn/528068263637045248/2023/2/12/gpt2-1676184129103369689090.png"
             class="card-img-top" width="300" height="300">
           <div class="card-body">
-            <a href="trang1.html" style="text-decoration: none; font-weight: bold; color: black;">
               <h5 class="card-title2"></h5>
-            </a>
             <p>ChatGPT ra đời đã làm 'dậy sóng' nhiều nhà khoa học và các ngành nghề khác nhau. Chỉ trong khoảng thời gian ngắn, công cụ này đã phát triển nhanh chóng và được rất nhiều người sử dụng.<p>
               <div>Việc ChatGPT ra đời được giới chuyên gia cho rằng sẽ ảnh hưởng đến nhiều lĩnh vực, như việc công cụ này có thể tự viết khóa luận hay thậm chí vượt qua kỳ thi cấp phép hành nghề y của Mỹ vừa qua. Rất nhiều người đã đặt câu hỏi liệu rằng ChatGPT có thể thay thế được bác sĩ hay không?
               <p>Tính năng tìm kiếm và tổng hợp thông tin mạnh mẽ </p>
@@ -130,7 +142,7 @@ Từ những yếu tố trên thì có thể kết luận rằng, trong thời �
                 <h3 class="m-0">Tranding</h3>
               </div>
               <div class="d-flex mb-3">
-                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/13/photo-4-16762537477531772290499.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="https://images2.thanhnien.vn/zoom/700_438/528068263637045248/2023/2/13/smartphone-android-trung-quoc-2-16762990997781387693783-83-0-1333-2000-crop-1676299107468225903361.jpg" style="width: 100px; height: 100px; object-fit: cover;">
                 
                 <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
                   <div class="mb-1" style="font-size: 13px;">
@@ -138,55 +150,55 @@ Từ những yếu tố trên thì có thể kết luận rằng, trong thời �
                     <span class="px-1">/</span>
                     <span>13/2/2023</span>
                   </div>
-                  <a class="h6 m-0" href="trang2.html">
+                  <a class="h6 m-0" href="news12.html">
+                    <p class="card-title15"></p>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex mb-3">
+                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/14/photo-9-16763600282471418711929.jpeg" style="width: 140px; height: 100px; object-fit: cover;">
+                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                  <div class="mb-1" style="font-size: 13px;">
+                    <a href="">technology</a>
+                    <span class="px-1">/</span>
+                    <span>13/2/2023</span>
+                  </div>
+                  <a class="h6 m-0"href="news1.html">
                     <p class="card-title1"></p>
                   </a>
                 </div>
               </div>
               <div class="d-flex mb-3">
-                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/13/photo-1-1676286872234123252029.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                  <img src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2023/2/12/sony-dualsense-edge-controller-16761996159581174949922.jpg"  style="width: 100px; height: 100px; object-fit: cover;">
                 <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
                   <div class="mb-1" style="font-size: 13px;">
                     <a href="">technology</a>
                     <span class="px-1">/</span>
                     <span>13/2/2023</span>
                   </div>
-                  <a class="h6 m-0"href="">
-                    <p class="card-title1"></p>
-                  </a>
+                  <a class="h6 m-0" href="news20.html"><p class="card-title20"></p></a>
                 </div>
               </div>
               <div class="d-flex mb-3">
-                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/13/photo-1-16762677105731489783011.png" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="https://ftw.usatoday.com/wp-content/uploads/sites/90/2021/09/fifa-22-gameplay-1.jpg" style="width: 100px; height: 100px; object-fit: cover;">
                 <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
                   <div class="mb-1" style="font-size: 13px;">
                     <a href="">technology</a>
                     <span class="px-1">/</span>
                     <span>13/2/2023</span>
                   </div>
-                  <a class="h6 m-0" href=""><p class="card-title1"></p></a>
+                  <a class="h6 m-0" href="news12.html"><p class="card-title12"></p></a>
                 </div>
               </div>
               <div class="d-flex mb-3">
-                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/13/photo-1-16762476835082105484973.jpg" style="width: 100px; height: 100px; object-fit: cover;">
+                <img src="https://images2.thanhnien.vn/528068263637045248/2023/2/14/screenshot2-1676342975667880816166.jpg" style="width: 100px; height: 100px; object-fit: cover;">
                 <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
                   <div class="mb-1" style="font-size: 13px;">
                     <a href="">technology</a>
                     <span class="px-1">/</span>
                     <span>13/2/2023</span>
                   </div>
-                  <a class="h6 m-0" href=""><p class="card-title1"></p></a>
-                </div>
-              </div>
-              <div class="d-flex mb-3">
-                <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2023/2/13/photo-7-1676283096220350526594.jpg" style="width: 100px; height: 100px; object-fit: cover;">
-                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
-                  <div class="mb-1" style="font-size: 13px;">
-                    <a href="">technology</a>
-                    <span class="px-1">/</span>
-                    <span>13/2/2023</span>
-                  </div>
-                  <a class="h6 m-0" href=""><p class="card-title1"></p></a>
+                  <a class="h6 m-0" href="news11.html"><p class="card-title10"></p></a>
                 </div>
               </div>
             </div>
@@ -252,7 +264,5 @@ Từ những yếu tố trên thì có thể kết luận rằng, trong thời �
       </p>
   </div>
   <!-- Footer End -->
-
 </body>
-
 </html>

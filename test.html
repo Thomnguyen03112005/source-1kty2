@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+          integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+          integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+          crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+          integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+          integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,700;1,500;1,700;1,800&display=swap"
+          rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <title>Document</title>
+        <script src="index.js"></script>
+        <script src="data.json"></script>
+      </head>
+<body>
+    <img id="img">
+    <script>
+
+// Đọc file JSON
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    // Chọn một dữ liệu img trong JSON
+    let imgData = data[0].img;
+    let imgData1 = data[1].img;
+    let imgData2 = data[2].img;
+    let imgData3 = data[3].img;
+    let imgData4 = data[4].img;
+    let imgData5 = data[5].img;
+    let imgData6 = data[6].img;
+    let imgData7 = data[7].img;
+    let imgData8 = data[8].img;
+    let imgData9 = data[9].img;
+    let imgData10 = data[10].img;
+    let imgData11 = data[11].img;
+    let imgData12 = data[12].img;
+    let imgData13 = data[13].img;
+    let imgData14 = data[14].img;
+    let imgData15 = data[15].img;
+    let imgData16 = data[16].img;
+    let imgData17 = data[17].img;
+    let imgData18 = data[18].img;
+    let imgData19 = data[19].img;
+    let imgData20 = data[20].img;
+    let imgData21 = data[21].img;
+    let imgData22 = data[22].img;
+    let imgData23 = data[23].img;
+    let imgData24 = data[24].img;
+    let imgData25 = data[25].img;
+
+    // Đưa dữ liệu img vào thẻ img src của HTML
+    document.getElementById('img').src =(data[0].img);
+    document.getElementById('img1').src = imgData1;
+    document.getElementById('img2').src = imgData2;
+    document.getElementById('img3').src = imgData3;
+    document.getElementById('img4').src = imgData4;
+    document.getElementById('img5').src = imgData5;
+    document.getElementById('img6').src = imgData6;
+    document.getElementById('img7').src = imgData7;
+    document.getElementById('img8').src = imgData8;
+    document.getElementById('img9').src = imgData9;
+    document.getElementById('img10').src = imgData10;
+    document.getElementById('img11').src = imgData11;
+    document.getElementById('img12').src = imgData12;
+    document.getElementById('img13').src = imgData13;
+    document.getElementById('img14').src = imgData14;
+    document.getElementById('img15').src = imgData15;
+    document.getElementById('img16').src = imgData16;
+    document.getElementById('img17').src = imgData17;
+    document.getElementById('img18').src = imgData18;
+    document.getElementById('img19').src = imgData19;
+    document.getElementById('img20').src = imgData20;
+    document.getElementById('img21').src = imgData21;
+    document.getElementById('img22').src = imgData22;
+    document.getElementById('img23').src = imgData23;
+    document.getElementById('img24').src = imgData24;
+    document.getElementById('img25').src = imgData25;
+
+  });
+  // HTML
+    </script>
+</body>
+</html>
