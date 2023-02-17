@@ -122,3 +122,39 @@ $(document).ready(function(){
         }
       });  
   });
+
+	$(document).ready(function() {
+		// Bắt sự kiện click nút tìm kiếm
+		$('#search-btn').click(function(e) {
+			e.preventDefault(); // Ngăn chặn form submit lại
+			var searchTerm = $('#search-input').val(); // Lấy từ khóa tìm kiếm
+			$.ajax({
+				url: 'data.json', // Đường dẫn đến file data.json
+				dataType: 'json',
+				success: function(data) {
+					// Xóa các kết quả tìm kiếm trước đó (nếu có)
+					$('#search-results').empty();
+					// Lặp qua từng object trong file data.json
+					$.each(data, function(index, obj) {
+						// Kiểm tra xem từ khóa tìm kiếm có xuất hiện trong trường "topic" hay không
+						if (obj.topic.includes(searchTerm)) {
+							// Nếu có, tạo một đối tượng HTML để hiển thị kết quả tìm kiếm
+							var $result = $('<div class="search-result">' +
+								'<a href="' + obj.link + '">' +
+								'<img src="' + obj.img + '">' +
+								'<h3>' + obj.title + '</h3>' +
+								'</a>' +
+								'</div>');
+							// Thêm đối tượng HTML này vào phần tử #search-results trên file html
+							$('#search-results').append($result);
+						}
+            window.location.href="a.html"
+					});
+				},
+				error: function() {
+					// Hiển thị thông báo lỗi nếu không thể tải file data.json
+					alert('Không thể tải dữ liệu');
+				}
+			});
+		});
+	});
